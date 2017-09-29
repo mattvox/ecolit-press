@@ -15,10 +15,10 @@ export const Container = styled.div`
 
 export const Background = styled.div`
   position: absolute;
-  height: 95%;
+  height: 100%;
   width: 100%;
 
-  background:
+  ${'' /* background:
   url(https://images.contentful.com/8tgzv1ffznc9/4XoG6GvOMEKIwG6IaWq8Wy/38ace0792e1356f0f6c05c92788f1e75/bg_landscape_768_web.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -38,7 +38,7 @@ export const Background = styled.div`
     -o-background-size: contain;
     background-size: contain;
     background-color: #53C3C3;
-  }
+  } */}
 `
 
 // creates a small, styled div to eliminate
@@ -58,13 +58,12 @@ export const ColorFix = styled.div`
 
 export const Content = styled.div`
   position: absolute;
-  top: 60%;
-  height: 100%;
+  top: 50%;
   width: 100%;
   color: #F3FBF6;
   transform: translateY(-50%);
 
-  @media screen and (min-aspect-ratio: 3/2), screen and (max-width: 440px) {
+  ${'' /* @media screen and (min-aspect-ratio: 3/2), screen and (max-width: 440px) {
     top: 50%;
-  }
+  } */}
 `

@@ -11,6 +11,10 @@ export const theme = {
   mediumBlue: '#53c3c3',
   mediumGray: '#67737b',
   darkGray: '#232b3a',
+  green: '#87b09A',
+  orange: '#e16a2d',
+  blue: '#c7dae7',
+  purple: '#41395f',
 }
 
 export const Page = styled(Row)`
