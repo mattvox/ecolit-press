@@ -1,32 +1,30 @@
 import React from 'react'
+// import { AppContainer } from './components/styled/theme'
 // import { Route, IndexRoute } from 'react-router'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import App from './App'
-import HomePage from './containers/home-page'
-import AboutPage from './containers/about-page'
-import ContactPage from './containers/contact-page'
-import BookPage from './containers/book-page'
-import NotFoundPage from './containers/not-found-page'
+import HomePage from './views/home-page'
+import AboutPage from './views/about-page'
+import ContactPage from './views/contact-page'
+import BookPage from './views/book-page'
+import NotFoundPage from './views/not-found-page'
 
-// export default (
-//   <Route path='/' component={App}>
-//     <IndexRoute component={HomePage} />
-//   </Route>
-// )
+import Header from './components/header'
+import Footer from './components/footer'
 
 export default (
   <BrowserRouter>
     <div>
-      <App />
+      <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/about' component={AboutPage} />
-        <Route path='/contact' component={ContactPage} />
+        <Route exact path='/about' component={AboutPage} />
+        <Route exact path='/contact' component={ContactPage} />
         {/* TODO: make sure to redirect if book is not found!! */}
-        <Route path='/books/:title' component={BookPage} />
+        <Route exact path='/books/:title' component={BookPage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
 )

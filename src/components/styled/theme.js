@@ -20,19 +20,26 @@ export const theme = {
 export const Page = styled(Row)`
   padding-top: 60px;
   padding-bottom: 60px;
+
+  ${'' /* &.light {
+    background-color: ${theme.orange};
+    color: ${theme.blue};
+    text-align: center;
+  } */}
 `
 
 export const Title = styled.h1`
-  font-size: 4.5em;
+  font-family: 'Bitter', serif;
+  font-size: 4em;
   font-weight: bold;
   letter-spacing: -1px;
   margin: 0;
   padding-top: 20px;
   padding-bottom: 60px;
-  text-align: center;
 `
 
 export const Subtitle = styled.h1`
+  font-family: 'Bitter', serif;
   font-size: 2em;
   font-weight: bold;
 `
@@ -65,7 +72,7 @@ export const Content = styled.div`
   p {
     font-size: 1.5em;
     font-weight: normal;
-    padding: 20px;
+    padding: 20px 0;
   }
 
   ul {
@@ -77,7 +84,41 @@ export const Content = styled.div`
     font-size: 1.2em;
     list-style-type: none;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 20px 0;
+  }
+
+  blockquote {
+    border: none;
+    padding: 20px;
+    quotes: "“" "”" "‘" "’";
+
+    p {
+      font-size: 1.25em;
+      font-family: 'Bitter', serif;
+      font-style: italic;
+      line-height: 1.8em;
+      color: ${theme.mediumGray};
+
+      &::before {
+        content: open-quote;
+        font-family: serif;
+        font-style: italic;
+        font-size: 2.6em;
+        line-height: 0.1em;
+        margin-right: 6px;
+        vertical-align: -0.25em;
+      }
+
+      &::after {
+        content: close-quote;
+        font-family: serif;
+        font-style: italic;
+        font-size: 2.6em;
+        line-height: 0.1em;
+        margin-left: 6px;
+        vertical-align: -0.55em;
+      }
+    }
   }
 
   img {

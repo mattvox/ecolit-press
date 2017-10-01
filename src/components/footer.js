@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from 'react-bootstrap'
+import { Grid, Col } from 'react-bootstrap'
 import { Page, Content, theme } from './styled/theme'
 
 
@@ -10,13 +10,15 @@ const WithThemePage = Page.extend`
 `
 
 const Footer = () => (
-  <WithThemePage>
-    <Col xs={10} xsOffset={1}>
-      <Content>
-        <p>Ecolit Press © 2017</p>
-      </Content>
-    </Col>
-  </WithThemePage>
+  <Grid fluid>
+    <WithThemePage>
+      <Col xs={10} xsOffset={1}>
+        <Content>
+          <p>© 2017 Ecolit Press. All rights reserved.</p>
+        </Content>
+      </Col>
+    </WithThemePage>
+  </Grid>
 )
 
 export default Footer;

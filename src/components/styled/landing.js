@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { theme } from './theme'
 
 // styling for the landing component only
 // app-wide, reusable styles are found in theme.js
@@ -11,6 +11,7 @@ export const Container = styled.div`
   position: relative;
   width: 100%;
   text-align: center;
+  background-color: ${theme.green};
 `
 
 export const Background = styled.div`
@@ -18,7 +19,7 @@ export const Background = styled.div`
   height: 100%;
   width: 100%;
 
-  ${'' /* background:
+  background:
   url(https://images.contentful.com/8tgzv1ffznc9/4XoG6GvOMEKIwG6IaWq8Wy/38ace0792e1356f0f6c05c92788f1e75/bg_landscape_768_web.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -38,7 +39,7 @@ export const Background = styled.div`
     -o-background-size: contain;
     background-size: contain;
     background-color: #53C3C3;
-  } */}
+  }
 `
 
 // creates a small, styled div to eliminate
@@ -56,7 +57,7 @@ export const ColorFix = styled.div`
   background-color: #242B3A;
 `
 
-export const Content = styled.div`
+export const ContentContainer = styled.div`
   position: absolute;
   top: 50%;
   width: 100%;
