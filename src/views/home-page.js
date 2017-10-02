@@ -5,6 +5,7 @@ import { Grid } from 'react-bootstrap'
 
 import Landing from '../components/landing'
 import Mission from '../components/mission'
+import Story from '../components/story'
 import BookFeature from '../components/book-feature'
 import Footer from '../components/footer'
 
@@ -26,6 +27,7 @@ class HomePage extends Component {
     if (this.props.isFetched) {
       const {
         mission: { fields: mission },
+        story: { fields: story },
         emmaFeature: { fields: emmaFeature },
       } = this.props.content
 
@@ -36,6 +38,7 @@ class HomePage extends Component {
             <Element name='Mission'>
               <Mission data={mission} />
             </Element>
+            <Story data={story} />
             <BookFeature data={emmaFeature} />
             <Footer />
           </Grid>

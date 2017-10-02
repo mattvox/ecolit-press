@@ -113,7 +113,10 @@ const NavBar = (props) => {
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-        <Nav pullRight>
+        <Navbar.Text pullRight>
+          Under Construction... in the meantime, enjoy the new home page :)
+        </Navbar.Text>
+        {/* <Nav pullRight>
           <NavLink
             eventKey={1}
             onClick={ e => props.history.push('/about') }
@@ -132,7 +135,7 @@ const NavBar = (props) => {
           >
             Contact
           </NavLink>
-        </Nav>
+        </Nav> */}
       </Navbar.Collapse>
     </StyledNavbar>
   )

@@ -48,13 +48,21 @@ const BookFeature = ({
       </Col>
     </Col>
     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
-      <div
+      {/* <div
         style={{
           textAlign: 'center',
           marginTop: '40px',
           marginBottom: '40px'
          }}>
           <LinkButton to='/books/emma'>Learn More About Emma</LinkButton>
+      </div> */}
+      <div
+        style={{
+          textAlign: 'center',
+          marginTop: '40px',
+          marginBottom: '40px'
+         }}>
+          <LinkButton to='https://www.amazon.com/Emma-Alexandra-Lindsay-Fields/dp/0999207504/' target='_blank'>Purchase Emma</LinkButton>
       </div>
     </Col>
   </WithThemePage>

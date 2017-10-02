@@ -38,7 +38,7 @@ const Footer = () => (
   <WithThemePage>
     <Col xs={10} xsOffset={1} style={{ textAlign: 'center' }}>
       <IconContainer>
-        <Icon href="mailto:afields@ecolitpress.com">
+        <Icon href="https://www.instagram.com/ecolitpress/" target="_blank">
           <span className="fa-stack fa-md">
             <i className="fa fa-circle-thin fa-stack-2x"></i>
             <i className="fa fa-instagram fa-stack-1x"></i>
@@ -46,7 +46,7 @@ const Footer = () => (
         </Icon>
       </IconContainer>
       <IconContainer>
-        <Icon href="#">
+        <Icon href="mailto:afields@ecolitpress.com">
           <span className="fa-stack fa-md">
             <i className="fa fa-circle-thin fa-stack-2x"></i>
             <i className="fa fa-envelope-o fa-stack-1x"></i>

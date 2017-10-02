@@ -5,7 +5,7 @@ import { Page, Title, Content, theme } from './styled/theme'
 
 
 const WithThemePage = Page.extend`
-  background-color: ${theme.white};
+  background-color: ${theme.offWhite};
   color: ${theme.darkGray};
 
   h1 {

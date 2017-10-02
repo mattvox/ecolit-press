@@ -20,14 +20,14 @@ const Mission = ({ data: { heading, content } }) => (
       <Content>
         <ReactMarkdown source={content} />
       </Content>
-      <div
+      {/* <div
         style={{
           textAlign: 'center',
           marginTop: '40px',
           marginBottom: '40px'
          }}>
           <LinkButton to='/about'>Learn More Ecolit Press</LinkButton>
-      </div>
+      </div> */}
     </Col>
   </WithThemePage>
 )
