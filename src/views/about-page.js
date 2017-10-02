@@ -2,27 +2,30 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
-import Mission from '../components/mission'
-import BookFeature from '../components/book-feature'
+import Story from '../components/story'
+import Author from '../components/author'
+
+import Header from '../components/header'
 
 import { fetchPageData } from '../actions'
 
 class AboutPage extends Component {
   componentDidMount() {
-    this.props.fetchPageData('about', '4OQitB7Enm466COeq0meCI')
+    this.props.fetchPageData('about', 'bijmWHfimcU0saoOQcsgc')
   }
 
   render() {
     if (this.props.isFetched) {
       const {
-        mission: { fields: mission },
-        emmaFeature: { fields: emmaFeature },
+        story: { fields: story },
+        author: { fields: author },
       } = this.props.content
 
       return (
         <Grid fluid>
-          <Mission data={mission} />
-          <BookFeature data={emmaFeature} />
+          <Header />
+          <Story data={story} />
+          <Author data={author} />
         </Grid>
       )
     }

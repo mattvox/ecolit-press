@@ -8,8 +8,10 @@ const StyledNavbar = styled(Navbar)`
     border: none;
     width: 100%;
     font-family: 'Bitter', serif;
+    padding: 0;
+    display: block;
 
-    a {
+    ${'' /* a {
       color: #fff;
 
       &:link {
@@ -24,7 +26,7 @@ const StyledNavbar = styled(Navbar)`
       &:active {
         color: #fff;
       }
-    }
+    } */}
 
   }
 
@@ -38,7 +40,9 @@ const StyledNavbar = styled(Navbar)`
   }
 
   .container {
-    ${'' /* border: none; */}
+    border: none;
+    padding: 0;
+    display: block;
   }
 
   .navbar-toggle {
@@ -51,8 +55,6 @@ const StyledNavbar = styled(Navbar)`
     ${'' /* height: 50px; */}
   }
 
-
-
   @media screen and (max-width: 768px) {
     .navbar-collapse {
       background-color: #fff;
@@ -63,8 +65,8 @@ const StyledNavbar = styled(Navbar)`
 const Logo = styled(Image)`
   margin: 10px 0;
   height: 30px;
-  display: none;
-  visibility: hidden;
+  ${'' /* display: none;
+  visibility: hidden; */}
 `
 
 const NavLink = styled(NavItem)`
@@ -72,33 +74,33 @@ const NavLink = styled(NavItem)`
 `
 
 const NavBar = (props) => {
-  console.log('nav props', props)
-
-
-
-
-    window.onscroll = function() {
-      const nav = document.querySelector('.logo')
-      const navBg = document.querySelector('.navbar')
-
-      if (props.location.pathname === '/') {
-      if ( window.pageYOffset > 560 ) {
-          nav.classList.remove('hidden')
-          nav.classList.remove('animate-hidden')
-          nav.classList.add('animate-show')
-          navBg.classList.add('show-bg')
-          navBg.classList.remove('hide-bg')
-      } else {
-          nav.classList.add('animate-hidden')
-          nav.classList.remove('animate-show')
-          navBg.classList.add('hide-bg')
-          navBg.classList.remove('show-bg')
-      }
-    }
-    }
+  // window.onscroll = function() {
+  //   const nav = document.querySelector('.logo')
+  //   const navBg = document.querySelector('.navbar')
+  //
+  //   if (props.location.pathname === '/') {
+  //     if ( window.pageYOffset > 360 ) {
+  //         nav.classList.remove('hidden')
+  //         nav.classList.remove('animate-hidden')
+  //         nav.classList.add('animate-show')
+  //         navBg.classList.add('show-bg')
+  //         navBg.classList.remove('hide-bg')
+  //     } else {
+  //         nav.classList.add('animate-hidden')
+  //         nav.classList.remove('animate-show')
+  //         navBg.classList.add('hide-bg')
+  //         navBg.classList.remove('show-bg')
+  //     }
+  //   } else {
+  //     navBg.classList.remove('hide-bg')
+  //     navBg.classList.add('show-bg')
+  //     nav.classList.add('animate-show')
+  //     nav.classList.remove('hidden')
+  //   }
+  // }
 
   return (
-    <StyledNavbar collapseOnSelect fixedTop={true} className='hide-bg'>
+    <StyledNavbar collapseOnSelect fixedTop={true} className='show-bg'>
       <Navbar.Header>
         <Navbar.Brand>
           <Link to='/'>

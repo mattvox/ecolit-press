@@ -27,18 +27,6 @@ export const Background = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  ${'' /* @media screen and (min-width: 769px) {
-    background:
-    url(https://images.contentful.com/8tgzv1ffznc9/5bMD4QQb1CCossOiYWESs/7e55d4683b27c75d606b09c4f7d3f7b0/bg_landscape_1280_wide_web.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    background-color: #53C3C3;
-  } */}
 `
 
 // creates a small, styled div to eliminate
@@ -62,8 +50,4 @@ export const ContentContainer = styled.div`
   width: 100%;
   color: #F3FBF6;
   transform: translateY(-50%);
-
-  ${'' /* @media screen and (min-aspect-ratio: 3/2), screen and (max-width: 440px) {
-    top: 50%;
-  } */}
 `

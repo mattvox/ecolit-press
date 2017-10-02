@@ -7,7 +7,7 @@ import Landing from '../components/landing'
 import Mission from '../components/mission'
 import BookFeature from '../components/book-feature'
 import Footer from '../components/footer'
-import Header from '../components/header'
+
 // import Contact from '../components/contact'
 
 import { fetchPageData } from '../actions'
@@ -31,7 +31,6 @@ class HomePage extends Component {
 
       return (
         <div>
-          <Header />
           <Landing />
           <Grid fluid>
             <Element name='Mission'>

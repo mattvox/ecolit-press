@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
 
 // reusable styles used app-wide
@@ -40,7 +41,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h1`
   font-family: 'Bitter', serif;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
 `
 
@@ -124,5 +125,34 @@ export const Content = styled.div`
   img {
     width: 100%;
     height: auto;
+  }
+`
+
+export const LinkButton = styled(Link)`
+  border-radius: 6px;
+  border: 2px solid ${theme.green};
+  font-size: 1.1em;
+  padding: 10px;
+  text-decoration: none;
+
+  &:link {
+    color: ${theme.white};
+    background-color: ${theme.green};
+  }
+  &:visited {
+    color: ${theme.white};
+    background-color: ${theme.green};
+    text-decoration: none;
+  }
+  &:hover {
+    color: ${theme.white};
+    background-color: ${theme.purple};
+    border-color: ${theme.purple};
+    text-decoration: none;
+  }
+  &:active {
+    color: ${theme.white};
+    background-color: ${theme.purle};
+    text-decoration: none;
   }
 `

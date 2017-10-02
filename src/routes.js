@@ -10,11 +10,11 @@ import BookPage from './views/book-page'
 import NotFoundPage from './views/not-found-page'
 
 import Header from './components/header'
-import Footer from './components/footer'
 
 export default (
   <BrowserRouter>
     <div>
+      <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/about' component={AboutPage} />

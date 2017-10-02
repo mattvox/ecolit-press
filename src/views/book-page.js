@@ -2,28 +2,30 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
-import Mission from '../components/mission'
-import BookFeature from '../components/book-feature'
+import BookLanding from '../components/book-landing'
+import Author from '../components/author'
 
 import { fetchPageData } from '../actions'
 
-class BookPage extends Component {
+class AboutPage extends Component {
   componentDidMount() {
-    this.props.fetchPageData('book', '4OQitB7Enm466COeq0meCI')
+    this.props.fetchPageData('book', '68RN7ii6woQEOmwcCYwiuo')
   }
 
   render() {
     if (this.props.isFetched) {
       const {
-        mission: { fields: mission },
-        emmaFeature: { fields: emmaFeature },
+        emmaLanding: { fields: emmaLanding },
+        author: { fields: author },
       } = this.props.content
 
       return (
-        <Grid fluid>
-          <Mission data={mission} />
-          <BookFeature data={emmaFeature} />
-        </Grid>
+        <div>
+          <BookLanding data={emmaLanding} />
+          <Grid fluid>
+            <Author data={author} />
+          </Grid>
+        </div>
       )
     }
 
@@ -40,4 +42,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { fetchPageData })(BookPage);
+export default connect(mapStateToProps, { fetchPageData })(AboutPage);

@@ -38,5 +38,66 @@ img {
 
 .show-bg {
   transition: background 0.5s ease;
-  background: #eeebeb;
+  background: #f5f2f2;
+}
+
+
+
+.navWide {
+  display: none;
+}
+
+.navNarrow {
+  i {
+      float: left;
+  }
+
+  .narrowLinks {
+      display: none;
+
+      a {
+          display: block;
+          float: left;
+          clear: left;
+      }
+  }
+}
+
+@media (min-width: 480px) {
+    nav {
+
+        .navWide {
+            display: block;
+        }
+
+        .navNarrow {
+            display: none;
+        }
+    }
+}
+
+.custom-icon {
+  background: #666;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  border: 6px solid #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  color: #fff;
+  display: table-cell;
+  font-size: 45px;
+  height: 60px;
+  padding: 30px;
+  text-align: center;
+  transition: .5s;
+  vertical-align: middle;
+  width: 60px;
+}
+.custom-icon:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.fix-editor {
+  display: none;
+}
+.icon-wrapper {
+  display: inline-block;
 }
