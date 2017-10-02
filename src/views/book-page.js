@@ -28,7 +28,7 @@ class BookPage extends Component {
     }
 
     return (
-      <div>loading...</div>
+      <div></div>
     )
   }
 }

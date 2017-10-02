@@ -20,16 +20,15 @@ export const Background = styled.div`
   width: 100%;
 
   background:
-  url(https://images.contentful.com/8tgzv1ffznc9/4XoG6GvOMEKIwG6IaWq8Wy/38ace0792e1356f0f6c05c92788f1e75/bg_landscape_768_web.png);
+  url(https://images.contentful.com/dfr34shq95oy/2mAv0fqWxCmgugym0Cu84a/62402c6803f7f6950a38963d0b2bdc3e/EcoLitMainPageBackground.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-  background-color: #53C3C3;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-  @media screen and (min-width: 769px) {
+  ${'' /* @media screen and (min-width: 769px) {
     background:
     url(https://images.contentful.com/8tgzv1ffznc9/5bMD4QQb1CCossOiYWESs/7e55d4683b27c75d606b09c4f7d3f7b0/bg_landscape_1280_wide_web.png);
     background-repeat: no-repeat;
@@ -39,7 +38,7 @@ export const Background = styled.div`
     -o-background-size: contain;
     background-size: contain;
     background-color: #53C3C3;
-  }
+  } */}
 `
 
 // creates a small, styled div to eliminate

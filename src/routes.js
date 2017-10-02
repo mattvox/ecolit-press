@@ -15,7 +15,6 @@ import Footer from './components/footer'
 export default (
   <BrowserRouter>
     <div>
-      <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/about' component={AboutPage} />
@@ -24,7 +23,6 @@ export default (
         <Route exact path='/books/:title' component={BookPage} />
         <Route component={NotFoundPage} />
       </Switch>
-      <Footer />
     </div>
   </BrowserRouter>
 )

@@ -28,7 +28,7 @@ class ContactPage extends Component {
     }
 
     return (
-      <div>loading...</div>
+      <div></div>
     )
   }
 }

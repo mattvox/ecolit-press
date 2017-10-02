@@ -1,5 +1,4 @@
 body {
-  background-color: #232b3a;
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,4 +17,26 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+.animate-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.5s linear;
+}
+
+.animate-show {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 1s, opacity 0.5s linear;
+}
+
+.hide-bg {
+  transition: background 0.5s ease;
+  background: none;
+}
+
+.show-bg {
+  transition: background 0.5s ease;
+  background: #eeebeb;
 }

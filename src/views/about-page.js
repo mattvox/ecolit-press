@@ -28,7 +28,7 @@ class AboutPage extends Component {
     }
 
     return (
-      <div>loading...</div>
+      <div></div>
     )
   }
 }

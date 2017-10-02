@@ -24,7 +24,7 @@ const Landing = (props) => (
         </Row>
       </Grid>
     </ContentContainer>
-    <AnchorLink to={'Mission'} spy={true} smooth={true}>
+    <AnchorLink activeClass='active' to={'Mission'} spy={true} smooth={true}>
       <DownArrow />
     </AnchorLink>
   </Container>

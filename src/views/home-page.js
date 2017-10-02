@@ -6,10 +6,11 @@ import { Grid } from 'react-bootstrap'
 import Landing from '../components/landing'
 import Mission from '../components/mission'
 import BookFeature from '../components/book-feature'
+import Footer from '../components/footer'
+import Header from '../components/header'
 // import Contact from '../components/contact'
 
 import { fetchPageData } from '../actions'
-
 
 class HomePage extends Component {
   componentDidMount() {
@@ -21,6 +22,7 @@ class HomePage extends Component {
     // react-scroll
     const Element = Scroll.Element
 
+
     if (this.props.isFetched) {
       const {
         mission: { fields: mission },
@@ -29,19 +31,21 @@ class HomePage extends Component {
 
       return (
         <div>
+          <Header />
           <Landing />
           <Grid fluid>
             <Element name='Mission'>
               <Mission data={mission} />
             </Element>
             <BookFeature data={emmaFeature} />
+            <Footer />
           </Grid>
         </div>
       )
     }
 
     return (
-      <div>loading...</div>
+      <div></div>
     )
   }
 }
