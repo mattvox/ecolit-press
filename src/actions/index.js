@@ -14,7 +14,6 @@ export function fetchPageData(page, id) {
     'sys.id': id,
   })
     .then((response) => {
-      console.log('fetchPageData', response)
       return response
     })
     .catch(console.error)
@@ -44,7 +43,6 @@ export function requestPageData(page, id) {
 // after request is resolved with the response
 // from the API being passed along to the section reducer
 export function receivePageData(response, page, id) {
-  console.log(response)
   return {
     type: RECEIVE_PAGE_DATA,
     payload: {

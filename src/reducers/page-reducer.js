@@ -23,7 +23,6 @@ function createInitialState() {
 }
 
 function requestPageData(state, action) {
-  console.log('STATE', state)
   const { page, isFetching } = action.payload
   const { data } = state[page]
 

@@ -6,7 +6,6 @@ import React, { Component } from 'react'
 export default function(ComposedComponent) {
   class Loading extends Component {
     render() {
-      console.log(this.props)
       const { isFetched } = this.props
       const loader = <div>Loading...</div>
 
