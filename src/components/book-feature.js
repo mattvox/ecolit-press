@@ -56,14 +56,14 @@ const BookFeature = ({
          }}>
           <LinkButton to='/books/emma'>Learn More About Emma</LinkButton>
       </div> */}
-      <div
+      {/* <div
         style={{
           textAlign: 'center',
           marginTop: '40px',
           marginBottom: '40px'
          }}>
           <LinkButton to='https://www.amazon.com/Emma-Alexandra-Lindsay-Fields/dp/0999207504/' target='_blank'>Purchase Emma</LinkButton>
-      </div>
+      </div> */}
     </Col>
   </WithThemePage>
 )
