@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
 import BookLanding from '../components/book-landing'
+import BookPurchase from '../components/book-purchase'
 import Author from '../components/author'
+import Footer from '../components/footer'
 
 import { fetchPageData } from '../actions'
 
@@ -16,6 +18,7 @@ class AboutPage extends Component {
     if (this.props.isFetched) {
       const {
         emmaLanding: { fields: emmaLanding },
+        emmaDetailed: { fields: emmaPurchase },
         author: { fields: author },
       } = this.props.content
 
@@ -23,7 +26,9 @@ class AboutPage extends Component {
         <div>
           <BookLanding data={emmaLanding} />
           <Grid fluid>
+            <BookPurchase data={emmaPurchase} />
             <Author data={author} />
+            <Footer />
           </Grid>
         </div>
       )

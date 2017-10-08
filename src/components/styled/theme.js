@@ -129,11 +129,13 @@ export const Content = styled.div`
 `
 
 export const LinkButton = styled(Link)`
+  display: inline-block;
   border-radius: 6px;
   border: 2px solid ${theme.green};
-  font-size: 1.1em;
+  font-size: 1em;
   padding: 10px;
   text-decoration: none;
+  width: 90%;
 
   &:link {
     color: ${theme.white};

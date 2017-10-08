@@ -113,15 +113,15 @@ const NavBar = (props) => {
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-        <Navbar.Text pullRight>
+        {/* <Navbar.Text pullRight>
           Under Construction... in the meantime, enjoy the new home page :)
-        </Navbar.Text>
-        {/* <Nav pullRight>
+        </Navbar.Text> */}
+        <Nav pullRight>
           <NavLink
             eventKey={1}
-            onClick={ e => props.history.push('/about') }
+            onClick={ e => props.history.push('/') }
           >
-            About
+            Home
           </NavLink>
           <NavLink
             eventKey={1}
@@ -129,13 +129,13 @@ const NavBar = (props) => {
           >
             Emma
           </NavLink>
-          <NavLink
+          {/* <NavLink
             eventKey={1}
             onClick={ e => props.history.push('/contact') }
           >
             Contact
-          </NavLink>
-        </Nav> */}
+          </NavLink> */}
+        </Nav>
       </Navbar.Collapse>
     </StyledNavbar>
   )

@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import styled from 'styled-components'
-import { Grid, Row, Col, Image } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 import {
-  Page,
   Title,
   Subtitle,
   Content,
@@ -23,6 +22,11 @@ export const Background = styled.div`
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain; */}
+
+  @media screen and (max-width: 767px) {
+    background: top;
+    background-color: ${theme.blue};
+  }
 `
 
 export const Container = styled.div`
@@ -61,8 +65,8 @@ const BookLanding = ({
       <ContentContainer>
         <Grid fluid>
           <Row>
-            <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={1}>
-              <Col xs={12} md={6}>
+            <Col xs={12} sm={12} md={8} mdOffset={1}>
+              <Col xs={12} sm={6}>
                 <StyledTitle>{bookTitle}</StyledTitle>
                 <Subtitle>{`by ${author}`}</Subtitle>
                 <Content>
