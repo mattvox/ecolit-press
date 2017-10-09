@@ -4,7 +4,6 @@ import { Col, Image } from 'react-bootstrap'
 import {
   Page,
   Title,
-  Subtitle,
   Content,
   LinkButton,
   theme

@@ -82,10 +82,10 @@ export const Content = styled.div`
   }
 
   li {
-    font-size: 1.2em;
-    list-style-type: none;
-    margin: 0;
-    padding: 20px 0;
+    font-size: 1.5em;
+    list-style-type: circle;
+    margin-left: 32px;
+    padding: 0 0 20px 0;
   }
 
   blockquote {

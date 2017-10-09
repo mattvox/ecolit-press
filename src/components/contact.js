@@ -1,20 +1,35 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import { Col } from 'react-bootstrap'
-import { Page, theme } from './styled/theme'
+import { Page, Title, Content, LinkButton, theme } from './styled/theme'
 
 
-const WithColorPage = Page.extend`
-  background-color: ${theme.lightBlue};
+const WithThemePage = Page.extend`
+  background-color: ${theme.white};
   color: ${theme.darkGray};
-  text-align: center;
+
+  h1 {
+    color: ${theme.purple};
+  }
 `
 
-const Contact = (props) => (
-  <WithColorPage>
+const Contact = ({ data: { heading, content } }) => (
+  <WithThemePage>
     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
-      This is the contacts section
+      <Title>{heading}</Title>
+      <Content>
+        <ReactMarkdown source={content} />
+      </Content>
+      {/* <div
+        style={{
+          textAlign: 'center',
+          marginTop: '40px',
+          marginBottom: '40px'
+         }}>
+          <LinkButton to='/about'>Learn More Ecolit Press</LinkButton>
+      </div> */}
     </Col>
-  </WithColorPage>
+  </WithThemePage>
 )
 
 export default Contact;

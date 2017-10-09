@@ -129,12 +129,12 @@ const NavBar = (props) => {
           >
             Emma
           </NavLink>
-          {/* <NavLink
+          <NavLink
             eventKey={1}
             onClick={ e => props.history.push('/contact') }
           >
             Contact
-          </NavLink> */}
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
     </StyledNavbar>
