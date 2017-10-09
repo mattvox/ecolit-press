@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
-import Contact from '../components/contact'
-import Footer from '../components/footer'
+import Contact from '../contact'
+import Footer from '../footer'
 
-import { fetchPageData } from '../actions'
+import { fetchPageData } from '../../actions'
 
 class ContactPage extends Component {
   componentDidMount() {
@@ -13,7 +13,6 @@ class ContactPage extends Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.props.isFetched) {
       const {
         contact: { fields: contact },

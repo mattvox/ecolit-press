@@ -4,10 +4,9 @@ import { Grid } from 'react-bootstrap'
 
 import Story from '../components/story'
 import Author from '../components/author'
-
 import Header from '../components/header'
 
-import { fetchPageData } from '../actions'
+import { fetchPageData } from '../../actions'
 
 class AboutPage extends Component {
   componentDidMount() {

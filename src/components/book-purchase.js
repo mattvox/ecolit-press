@@ -11,12 +11,7 @@ import {
 
 
 const WithThemePage = Page.extend`
-  ${'' /* color: ${theme.darkGray};
-  background: linear-gradient(${theme.blue} 206px, ${theme.white} 206px);
 
-  @media screen and (max-width: 768px) {
-    background: ${theme.blue};
-  } */}
 `
 
 const StyledTitle = Title.extend`
@@ -35,7 +30,6 @@ const BookFeature = ({
     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
       <Col xs={12} md={6}>
         <StyledTitle>{heading}</StyledTitle>
-        {/* <Subtitle>{`by ${author}`}</Subtitle> */}
         <Content>
           <ReactMarkdown source={content} />
         </Content>

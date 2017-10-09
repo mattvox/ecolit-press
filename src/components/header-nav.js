@@ -1,10 +1,8 @@
+// NEEDS TO BE REMOVED!!!!
+
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Image } from 'react-bootstrap'
 import styled from 'styled-components'
-
-// import Plx from 'react-plx'
-
 
 const NavBar = styled.nav`
   ${'' /* position: absolute; */}
@@ -52,28 +50,26 @@ const HeaderNav = (props) => {
   }
 
   return (
-      <NavBar>
-        <div className="navWide">
-          <div className="wideDiv">
-            <Link to='/about'>About</Link>
-            <Link to='/books/emma'>Emma</Link>
-            <Link to='/contact'>Contact</Link>
-          </div>
+    <NavBar>
+      <div className="navWide">
+        <div className="wideDiv">
+          <Link to='/about'>About</Link>
+          <Link to='/books/emma'>Emma</Link>
+          <Link to='/contact'>Contact</Link>
         </div>
-        <div className="navNarrow">
-          <i
-            className="fa fa-bars fa-2x"
-            onClick={burgerToggle}
-          ></i>
-          <div className="narrowLinks">
-            <Link to='/about'>About</Link>
-            <Link to='/books/emma'>Emma</Link>
-            <Link to='/contact'>Contact</Link>
-          </div>
+      </div>
+      <div className="navNarrow">
+        <i
+          className="fa fa-bars fa-2x"
+          onClick={burgerToggle}
+        ></i>
+        <div className="narrowLinks">
+          <Link to='/about'>About</Link>
+          <Link to='/books/emma'>Emma</Link>
+          <Link to='/contact'>Contact</Link>
         </div>
-      </NavBar>
-
-
+      </div>
+    </NavBar>
   )
 }
 

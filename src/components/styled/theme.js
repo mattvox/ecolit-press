@@ -21,12 +21,6 @@ export const theme = {
 export const Page = styled(Row)`
   padding-top: 60px;
   padding-bottom: 60px;
-
-  ${'' /* &.light {
-    background-color: ${theme.orange};
-    color: ${theme.blue};
-    text-align: center;
-  } */}
 `
 
 export const Title = styled.h1`

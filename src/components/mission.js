@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col } from 'react-bootstrap'
-import { Page, Title, Content, LinkButton, theme } from './styled/theme'
+import { Page, Title, Content, theme } from './styled/theme'
 
 
 const WithThemePage = Page.extend`
@@ -20,16 +20,24 @@ const Mission = ({ data: { heading, content } }) => (
       <Content>
         <ReactMarkdown source={content} />
       </Content>
-      {/* <div
-        style={{
-          textAlign: 'center',
-          marginTop: '40px',
-          marginBottom: '40px'
-         }}>
-          <LinkButton to='/about'>Learn More Ecolit Press</LinkButton>
-      </div> */}
     </Col>
   </WithThemePage>
 )
 
 export default Mission;
+
+// to be used later with fully dynamic rendered sections
+// -----------------------------------------------------
+
+// const Mission = (props) => (
+// // const Mission = ({ data: { heading, content } }) => (
+//   <WithThemePage>
+//     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
+//       {props.data.heading && <Title>{props.data.heading}</Title>}
+//       {props.imageProp && <Title>{props.data.heading}</Title>}
+//       <Content>
+//         <ReactMarkdown source={props.data.content} />
+//       </Content>
+//     </Col>
+//   </WithThemePage>
+// )

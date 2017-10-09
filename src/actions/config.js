@@ -9,6 +9,12 @@ export const client = createClient({
   accessToken: API_TOKEN,
 })
 
+// to be used later with newest version of React-Snapshot v2,
+// to dynamically sync layout and content before fetching data,
+// since everything will be prerendered to static markup,
+// during the build process.
+// ------------------------------------------------------------
+
 // client.sync({
 //   initial: true,
 //   content_type: 'page',

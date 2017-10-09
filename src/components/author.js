@@ -11,7 +11,6 @@ import {
 
 
 const WithThemePage = Page.extend`
-  ${'' /* background-color: ${theme.blue}; */}
   color: ${theme.darkGray};
   background: linear-gradient(${theme.blue} 206px, ${theme.white} 206px);
 

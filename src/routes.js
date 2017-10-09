@@ -1,13 +1,16 @@
+// Combine into App.js in future build, redundant component
+// to be removed later
+
 import React from 'react'
 // import { AppContainer } from './components/styled/theme'
 // import { Route, IndexRoute } from 'react-router'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import HomePage from './views/home-page'
-// import AboutPage from './views/about-page'
-import ContactPage from './views/contact-page'
-import BookPage from './views/book-page'
-import NotFoundPage from './views/not-found-page'
+import HomePage from './components/views/home-page'
+// import AboutPage from './components/views/about-page'
+import ContactPage from './components/views/contact-page'
+import BookPage from './components/views/book-page'
+import NotFoundPage from './components/views/not-found-page'
 
 import Header from './components/header'
 

@@ -18,10 +18,6 @@ export const Background = styled.div`
   url(https://images.contentful.com/dfr34shq95oy/3e4bgpqsPumuswKM66Wa2k/d3124f202ea009b5deb0c0daaf5b56d0/Jonah_with_blue.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  ${'' /* -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain; */}
 
   @media screen and (max-width: 767px) {
     background: top;
@@ -36,7 +32,6 @@ export const Container = styled.div`
   position: relative;
   width: 100%;
   text-align: left;
-  ${'' /* background-color: ${theme.blue}; */}
 `
 
 export const ContentContainer = styled.div`
@@ -44,7 +39,6 @@ export const ContentContainer = styled.div`
   top: 50px;
   width: 100%;
   color: #F3FBF6;
-  ${'' /* transform: translateY(-50%); */}
 `
 
 const StyledTitle = Title.extend`

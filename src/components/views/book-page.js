@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
-import BookLanding from '../components/book-landing'
-import BookPurchase from '../components/book-purchase'
-import Author from '../components/author'
-import Footer from '../components/footer'
+import BookLanding from '../book-landing'
+import BookPurchase from '../book-purchase'
+import Author from '../author'
+import Footer from '../footer'
 
-import { fetchPageData } from '../actions'
+import { fetchPageData } from '../../actions'
 
-class AboutPage extends Component {
+
+class BookPage extends Component {
   componentDidMount() {
     this.props.fetchPageData('book', '68RN7ii6woQEOmwcCYwiuo')
   }
@@ -47,4 +48,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { fetchPageData })(AboutPage);
+export default connect(mapStateToProps, { fetchPageData })(BookPage);

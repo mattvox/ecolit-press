@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col } from 'react-bootstrap'
-import { Page, Title, Content, LinkButton, theme } from './styled/theme'
+import { Page, Title, Content, theme } from './styled/theme'
 
 
 const WithThemePage = Page.extend`
@@ -20,14 +20,6 @@ const Contact = ({ data: { heading, content } }) => (
       <Content>
         <ReactMarkdown source={content} />
       </Content>
-      {/* <div
-        style={{
-          textAlign: 'center',
-          marginTop: '40px',
-          marginBottom: '40px'
-         }}>
-          <LinkButton to='/about'>Learn More Ecolit Press</LinkButton>
-      </div> */}
     </Col>
   </WithThemePage>
 )

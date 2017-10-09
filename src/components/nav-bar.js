@@ -1,3 +1,5 @@
+// NEEDS A TON OF WORK, VERY MESSY!!!!
+
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { Nav, Navbar, NavItem, Image } from 'react-bootstrap'

@@ -12,7 +12,6 @@ import {
 
 
 const WithThemePage = Page.extend`
-  ${'' /* background-color: ${theme.blue}; */}
   color: ${theme.darkGray};
   background: linear-gradient(${theme.blue} 206px, ${theme.white} 206px);
 
@@ -58,15 +57,6 @@ const BookFeature = ({
             <LinkButton to='/books/emma'>Learn More About Emma</LinkButton>
         </div>
       </Col>
-
-      {/* <div
-        style={{
-          textAlign: 'center',
-          marginTop: '40px',
-          marginBottom: '40px'
-         }}>
-          <LinkButton to='https://www.amazon.com/Emma-Alexandra-Lindsay-Fields/dp/0999207504/' target='_blank'>Purchase Emma</LinkButton>
-      </div> */}
     </Col>
   </WithThemePage>
 )

@@ -2,32 +2,30 @@ import React from 'react'
 import { render } from 'react-snapshot'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
-// import { Router, browserHistory } from 'react-router'
 import promise from 'redux-promise'
 import thunk from 'redux-thunk'
 
+import App from './App'
 import reducers from './reducers'
-import routes from './routes'
 
-import './css/bootstrap.min.css'
-import './css/font-awesome.min.css'
-import './css/fonts.css'
-import './css/index.css'
+import './style/css/bootstrap.min.css'
+import './style/css/font-awesome.min.css'
+import './style/css/fonts.css'
+import './style/css/index.css'
 
 import registerServiceWorker from './registerServiceWorker'
 
-/* eslint-disable no-underscore-dangle */
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(reducers, /*preloadedState,*/ composeEnhancers(
   applyMiddleware(promise, thunk),
 ));
-/* eslint-enable */
+
 
 render(
   <Provider store={store}>
-    {/* <Router history={browserHistory} routes={routes} /> */}
-    {routes}
+    <App />
   </Provider>
   , document.getElementById('root'))
 registerServiceWorker()
