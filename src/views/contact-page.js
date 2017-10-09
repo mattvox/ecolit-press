@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
 import Contact from '../components/contact'
+import Footer from '../components/footer'
 
 import { fetchPageData } from '../actions'
 
@@ -12,6 +13,7 @@ class ContactPage extends Component {
   }
 
   render() {
+    console.log(this.props)
     if (this.props.isFetched) {
       const {
         contact: { fields: contact },
@@ -20,6 +22,7 @@ class ContactPage extends Component {
       return (
         <Grid fluid>
           <Contact data={contact} />
+          <Footer />
         </Grid>
       )
     }
