@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Col } from 'react-bootstrap'
 import { Page, Content, theme } from './styled/theme'
@@ -59,6 +60,8 @@ const Footer = () => (
         <p>© 2017 Ecolit Press. All rights reserved.</p>
       </Content>
     </Col>
+    <Link to={'/books/emma'} />
+    <Link to={'/contact'} />
   </WithThemePage>
 )
 

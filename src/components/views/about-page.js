@@ -9,7 +9,7 @@ import Header from '../components/header'
 import { fetchPageData } from '../../actions'
 
 class AboutPage extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPageData('about', 'bijmWHfimcU0saoOQcsgc')
   }
 

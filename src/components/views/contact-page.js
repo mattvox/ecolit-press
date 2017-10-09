@@ -8,7 +8,7 @@ import Footer from '../footer'
 import { fetchPageData } from '../../actions'
 
 class ContactPage extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPageData('contact', '69C3xeSrsIyI4YiyqQQ4mg')
   }
 

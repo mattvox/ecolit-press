@@ -14,7 +14,7 @@ import { fetchPageData } from '../../actions'
 
 
 class HomePage extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPageData('home', '4OQitB7Enm466COeq0meCI')
   }
 

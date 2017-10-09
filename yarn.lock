@@ -1033,10 +1033,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bezier-easing@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.0.3.tgz#cb493fddb7f8920ecca00973344ce0518885f17e"
-
 big.js@^3.1.3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
@@ -5407,13 +5403,6 @@ react-overlays@^0.7.0:
     prop-types-extra "^1.0.1"
     warning "^3.0.0"
 
-react-plx@^0.1.20:
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/react-plx/-/react-plx-0.1.20.tgz#1088a0eaf751c350f5ae51086f3dc7908c897858"
-  dependencies:
-    bezier-easing "^2.0.3"
-    prop-types "^15.5.8"
-
 react-prop-types@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/react-prop-types/-/react-prop-types-0.4.0.tgz#f99b0bfb4006929c9af2051e7c1414a5c75b93d0"
@@ -5516,9 +5505,9 @@ react-scroll@^1.5.4:
     object-assign "^4.1.1"
     prop-types "^15.5.8"
 
-react-snapshot@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-snapshot/-/react-snapshot-1.2.0.tgz#5e2cba30e45aa6f5dd1abfdaef0042c47b9e3ef9"
+react-snapshot@^2.0.0-0:
+  version "2.0.0-0"
+  resolved "https://registry.yarnpkg.com/react-snapshot/-/react-snapshot-2.0.0-0.tgz#d0e6b4536ce493072ef54f1cc8a584a8da3bcb66"
   dependencies:
     connect-history-api-fallback "^1.3.0"
     express "^4.15.2"
