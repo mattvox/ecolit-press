@@ -60,8 +60,8 @@ const Footer = () => (
         <p>© 2017 Ecolit Press. All rights reserved.</p>
       </Content>
     </Col>
-    <Link to={'/books/emma'} />
-    <Link to={'/contact'} />
+    <Link to={'/books/emma'}>Emma</Link>
+    <Link to={'/contact'}>Contact</Link>
   </WithThemePage>
 )
 

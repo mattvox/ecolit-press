@@ -6,26 +6,59 @@ import { client } from './config'
 export const FETCH_PAGE_DATA = 'FETCH_PAGE_DATA'
 export const REQUEST_PAGE_DATA = 'REQUEST_PAGE_DATA'
 export const RECEIVE_PAGE_DATA = 'RECEIVE_PAGE_DATA'
+export const SNAPSHOT_SITE_DATA = 'SNAPSHOT_SITE_DATA'
 
 // fetches data from Contenful API based on section variable
 // and call additional dispatches to track the request
-export function fetchPageData(page, id) {
-  const request = snapshot(() => {
-    return client.getEntries({
-      content_type: 'page',
-      include: 9,
-      'sys.id': id,
+export function snapshotSiteData(page, id) {
+
+    console.log('PAGE', page)
+
+    const request = snapshot(() => {
+      return client.getEntries({
+        content_type: 'page',
+        include: 9,
+        'sys.id': id,
+      })
+      .then((response) => response)
+      .catch(console.error)
     })
-    .then((response) => response)
-    .catch(console.error)
+
+      return dispatch => {
+        dispatch(requestPageData(page, id))
+
+        return request
+          .then(response => dispatch(receivePageData(response, page, id)))
+      }
+
+
+  // pageObj.map(page => {
+  //   const { name, id } = page
+  //
+  //   return dispatch => {
+  //     dispatch(fetchPageData(name, id))
+  //   }
+  // })
+
+}
+
+export function fetchPageData(page, id) {
+  const request = client.getEntries({
+    content_type: 'page',
+    include: 9,
+    'sys.id': id,
   })
+    .then((response) => {
+      return response
+    })
+    .catch(console.error)
 
-  return dispatch => {
-    dispatch(requestPageData(page, id))
+    return dispatch => {
+      dispatch(requestPageData(page, id))
 
-    return request
-      .then(response => dispatch(receivePageData(response, page, id)))
-  }
+      return request
+        .then(response => dispatch(receivePageData(response, page, id)))
+    }
 }
 
 // action dispatched by fetchPageData

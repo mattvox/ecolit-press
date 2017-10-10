@@ -10,12 +10,19 @@ import Story from '../story'
 import BookFeature from '../book-feature'
 import Footer from '../footer'
 
-import { fetchPageData } from '../../actions'
+import { fetchPageData, snapshotSiteData } from '../../actions'
 
+const pageObj = [
+  { name: 'home', id: '4OQitB7Enm466COeq0meCI' },
+  { name: 'book', id: '68RN7ii6woQEOmwcCYwiuo' },
+  { name: 'contact', id: '69C3xeSrsIyI4YiyqQQ4mg' },
+]
 
 class HomePage extends Component {
-  componentWillMount() {
-    this.props.fetchPageData('home', '4OQitB7Enm466COeq0meCI')
+
+
+  componentDidMount() {
+    // this.props.fetchPageData('home', '4OQitB7Enm466COeq0meCI')
   }
 
   render() {
@@ -58,7 +65,7 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { fetchPageData })(HomePage)
+export default connect(mapStateToProps, { fetchPageData, snapshotSiteData })(HomePage)
 
 // to be added later in a future build when most content is completely dynamic in nature
 

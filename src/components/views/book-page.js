@@ -12,7 +12,7 @@ import { fetchPageData } from '../../actions'
 
 class BookPage extends Component {
   componentWillMount() {
-    this.props.fetchPageData('book', '68RN7ii6woQEOmwcCYwiuo')
+    // this.props.fetchPageData('book', '68RN7ii6woQEOmwcCYwiuo')
   }
 
   render() {
