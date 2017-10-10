@@ -12,9 +12,16 @@ import * as actions from './actions'
 
 class App extends Component {
   componentWillMount() {
-      this.props.snapshotSiteData('home', '4OQitB7Enm466COeq0meCI')
-      this.props.snapshotSiteData('book', '68RN7ii6woQEOmwcCYwiuo')
-      this.props.snapshotSiteData('contact', '69C3xeSrsIyI4YiyqQQ4mg')
+    const { home, book, contact } = this.props.pages
+    const { snapshotSiteData: snapshot } = this.props
+
+    !home.isFetched && snapshot('home', '4OQitB7Enm466COeq0meCI')
+    !book.isFetched && snapshot('book', '68RN7ii6woQEOmwcCYwiuo')
+    !contact.isFetched && snapshot('contact', '69C3xeSrsIyI4YiyqQQ4mg')
+    
+      // this.props.snapshotSiteData('home', '4OQitB7Enm466COeq0meCI')
+      // this.props.snapshotSiteData('book', '68RN7ii6woQEOmwcCYwiuo')
+      // this.props.snapshotSiteData('contact', '69C3xeSrsIyI4YiyqQQ4mg')
   }
 
   render() {
@@ -35,4 +42,10 @@ class App extends Component {
   }
 }
 
-export default connect(null, actions)(App)
+function mapStateToProps(state) {
+  return {
+    pages: state.pages
+  }
+}
+
+export default connect(mapStateToProps, actions)(App)

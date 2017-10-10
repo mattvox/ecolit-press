@@ -13,7 +13,7 @@ import './style/css/font-awesome.min.css'
 import './style/css/fonts.css'
 import './style/css/index.css'
 
-import registerServiceWorker from './registerServiceWorker'
+// import registerServiceWorker from './registerServiceWorker'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -28,4 +28,4 @@ render(
     <App />
   </Provider>
   , document.getElementById('root'))
-registerServiceWorker()
+// registerServiceWorker()
