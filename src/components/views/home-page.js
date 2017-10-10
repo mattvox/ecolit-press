@@ -12,17 +12,10 @@ import Footer from '../footer'
 
 import { fetchPageData, snapshotSiteData } from '../../actions'
 
-const pageObj = [
-  { name: 'home', id: '4OQitB7Enm466COeq0meCI' },
-  { name: 'book', id: '68RN7ii6woQEOmwcCYwiuo' },
-  { name: 'contact', id: '69C3xeSrsIyI4YiyqQQ4mg' },
-]
-
 class HomePage extends Component {
-
-
   componentDidMount() {
-    // this.props.fetchPageData('home', '4OQitB7Enm466COeq0meCI')
+    const { isFetched, fetchPageData } = this.props
+    !isFetched && fetchPageData('home', '4OQitB7Enm466COeq0meCI')
   }
 
   render() {

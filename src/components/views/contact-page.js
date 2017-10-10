@@ -9,7 +9,8 @@ import { fetchPageData } from '../../actions'
 
 class ContactPage extends Component {
   componentDidMount() {
-    // this.props.fetchPageData('contact', '69C3xeSrsIyI4YiyqQQ4mg')
+    const { isFetched, fetchPageData } = this.props
+    !isFetched && fetchPageData('contact', '69C3xeSrsIyI4YiyqQQ4mg')
   }
 
   render() {
