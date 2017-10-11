@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import { Nav, Navbar, NavItem, Image } from 'react-bootstrap'
+import { Navbar, Image } from 'react-bootstrap'
 import styled from 'styled-components'
 
 const StyledNavbar = styled(Navbar)`
@@ -71,10 +71,6 @@ const Logo = styled(Image)`
   visibility: hidden; */}
 `
 
-const NavLink = styled(NavItem)`
-  margin-top: 2px;
-`
-
 const NavBar = (props) => {
   // window.onscroll = function() {
   //   const nav = document.querySelector('.logo')
@@ -114,10 +110,8 @@ const NavBar = (props) => {
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
-      <Navbar.Collapse>
-        {/* <Navbar.Text pullRight>
-          Under Construction... in the meantime, enjoy the new home page :)
-        </Navbar.Text> */}
+      {/* <Navbar.Collapse>
+
         <Nav pullRight>
           <NavLink
             eventKey={1}
@@ -125,6 +119,13 @@ const NavBar = (props) => {
           >
             Home
           </NavLink>
+
+          <li className='nav-item'>
+            <Link to={'/contact'} className='nav-link'>
+              Test Contact
+            </Link>
+          </li>
+
           <NavLink
             eventKey={1}
             onClick={ e => props.history.push('/books/emma') }
@@ -138,7 +139,61 @@ const NavBar = (props) => {
             Contact
           </NavLink>
         </Nav>
-      </Navbar.Collapse>
+      </Navbar.Collapse> */}
+
+      {/* <Navbar.Text pullRight>
+        Under Construction... in the meantime, enjoy the new home page :)
+      </Navbar.Text> */}
+
+
+      {/* <div className='navbar-collapse collapse'> */}
+        <Navbar.Collapse>
+
+
+
+        <ul className='nav navbar-nav navbar-right'>
+          {/* <NavLink
+            eventKey={1}
+            onClick={ e => props.history.push('/') }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            eventKey={1}
+            onClick={ e => props.history.push('/books/emma') }
+          >
+            Emma
+          </NavLink>
+          <NavLink
+            eventKey={1}
+            onClick={ e => props.history.push('/contact') }
+          >
+            Contact
+          </NavLink> */}
+
+          <li className='nav-item'>
+            <Link to={'/'} className='nav-link'>
+              Home
+            </Link>
+          </li>
+
+          <li className='nav-item'>
+            <Link to={'/books/emma'} className='nav-link'>
+              Emma
+            </Link>
+          </li>
+
+          <li className='nav-item'>
+            <Link to={'/contact'} className='nav-link'>
+              Contact
+            </Link>
+          </li>
+        </ul>
+
+        </Navbar.Collapse>
+      {/* </div> */}
+
     </StyledNavbar>
   )
 }
