@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
-import BookLanding from '../book-landing'
-import BookPurchase from '../book-purchase'
-import Author from '../author'
-import Footer from '../footer'
+import BookLanding from './book-landing'
+import BookPurchase from './book-purchase'
+import Author from './author'
+import Footer from '../../footer'
 
-import { fetchPageData } from '../../actions'
+import { fetchPageData } from '../../../actions'
 
 
 class BookPage extends Component {

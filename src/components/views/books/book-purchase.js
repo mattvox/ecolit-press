@@ -7,7 +7,7 @@ import {
   Content,
   LinkButton,
   theme
-} from './styled/theme'
+} from '../../styled/theme'
 
 
 const WithThemePage = Page.extend`

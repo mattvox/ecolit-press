@@ -6,9 +6,8 @@ import {
   Title,
   Subtitle,
   Content,
-  LinkButton,
-  theme
-} from './styled/theme'
+  theme,
+} from '../../styled/theme'
 
 
 const WithThemePage = Page.extend`
@@ -25,40 +24,28 @@ const StyledTitle = Title.extend`
   padding-bottom: 0px;
 `
 
-const BookFeature = ({
+const Author = ({
   data: {
-    bookTitle,
+    heading,
     author,
     content,
-    bookImage: { fields: { file: { url: bookImageUrl } } }
+    authorPhoto: { fields: { file: { url: authorPhotoUrl } } }
   }
 }) => (
   <WithThemePage>
     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
       <Col xs={12} md={6}>
-        <StyledTitle>{bookTitle}</StyledTitle>
-        <Subtitle>{`by ${author}`}</Subtitle>
+        <StyledTitle>{heading}</StyledTitle>
+        <Subtitle>{author}</Subtitle>
         <Content>
           <ReactMarkdown source={content} />
         </Content>
       </Col>
       <Col xs={12} md={6}>
-        <Image responsive src={`https:${bookImageUrl}`} />
-      </Col>
-    </Col>
-    <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
-      <Col xs={12} sm={6} smOffset={3} md={4} mdOffset={4}>
-        <div
-          style={{
-            textAlign: 'center',
-            marginTop: '40px',
-            marginBottom: '40px'
-           }}>
-            <LinkButton to='/books/emma'>Learn More About Emma</LinkButton>
-        </div>
+        <Image responsive src={`https:${authorPhotoUrl}`} />
       </Col>
     </Col>
   </WithThemePage>
 )
 
-export default BookFeature;
+export default Author;

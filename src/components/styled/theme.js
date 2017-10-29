@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
 
@@ -23,6 +24,15 @@ export const Page = styled(Row)`
   padding-bottom: 60px;
 `
 
+export const Section = styled(Row)`
+  padding-top: 40px;
+  padding-bottom: 40px;
+`
+
+export const SectionWrapper = styled(Row)`
+  margin: 20px;
+`
+
 export const Title = styled.h1`
   font-family: 'Bitter', serif;
   font-size: 4em;
@@ -30,13 +40,14 @@ export const Title = styled.h1`
   letter-spacing: -1px;
   margin: 0;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: ${props => props.noBottom ? 0 : '60px'};
+  color: ${props => props.color ? props.color : theme.purple};
 `
 
 export const Subtitle = styled.h1`
-  font-family: 'Bitter', serif;
+  ${'' /* font-family: 'Bitter', serif; */}
   font-size: 1.8em;
-  font-weight: bold;
+  ${'' /* font-weight: bold; */}
 `
 
 export const Content = styled.div`
@@ -85,6 +96,7 @@ export const Content = styled.div`
   blockquote {
     border: none;
     padding: 20px;
+    margin-bottom: 0;
     quotes: "“" "”" "‘" "’";
 
     p {

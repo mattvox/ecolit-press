@@ -7,7 +7,7 @@ import {
   Subtitle,
   Content,
   theme,
-} from './styled/theme'
+} from '../../styled/theme'
 
 export const Background = styled.div`
   position: absolute;

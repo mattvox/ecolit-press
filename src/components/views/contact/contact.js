@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col } from 'react-bootstrap'
-import { Page, Title, Content, theme } from './styled/theme'
+import { Page, Title, Content, theme } from '../../styled/theme'
 
 
 const WithThemePage = Page.extend`
-  background-color: ${theme.offWhite};
+  background-color: ${theme.white};
   color: ${theme.darkGray};
 
   h1 {
@@ -13,7 +13,7 @@ const WithThemePage = Page.extend`
   }
 `
 
-const Story = ({ data: { heading, content } }) => (
+const Contact = ({ data: { heading, content } }) => (
   <WithThemePage>
     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
       <Title>{heading}</Title>
@@ -24,4 +24,4 @@ const Story = ({ data: { heading, content } }) => (
   </WithThemePage>
 )
 
-export default Story;
+export default Contact;

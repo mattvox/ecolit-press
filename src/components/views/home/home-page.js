@@ -4,13 +4,12 @@ import { connect } from 'react-redux'
 import Scroll from 'react-scroll'
 import { Grid } from 'react-bootstrap'
 
-import Landing from '../landing'
-import Mission from '../mission'
-import Story from '../story'
-import BookFeature from '../book-feature'
-import Footer from '../footer'
+import Landing from './landing'
+import Mission from './mission'
+import Story from './story'
+import BookFeature from './book-feature'
 
-import { fetchPageData, snapshotSiteData } from '../../actions'
+import { fetchPageData, snapshotSiteData } from '../../../actions'
 
 class HomePage extends Component {
   componentDidMount() {
@@ -33,13 +32,12 @@ class HomePage extends Component {
       return (
         <div>
           <Landing />
-          <Grid fluid>
+          <Grid>
             <Element name='Mission'>
               <Mission data={mission} />
             </Element>
             <Story data={story} />
             <BookFeature data={emmaFeature} />
-            <Footer />
           </Grid>
         </div>
       )

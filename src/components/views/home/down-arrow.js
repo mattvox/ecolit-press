@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import FontAwesome from 'react-fontawesome'
-import { theme } from './styled/theme'
+import { theme } from '../../styled/theme'
 
 const ArrowContainer = styled.div`
   bottom: 60px;

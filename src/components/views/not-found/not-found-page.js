@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Col, Grid } from 'react-bootstrap'
-import { Title, Page } from '../styled/theme'
+import { Title, Page } from '../../styled/theme'
 
-import Footer from '../footer'
+import Footer from '../../footer'
 
 class NotFoundPage extends Component {
   render() {

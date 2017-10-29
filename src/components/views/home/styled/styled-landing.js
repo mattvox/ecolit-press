@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from './theme'
+import { theme } from '../../../styled/theme'
 
 // styling for the landing component only
 // app-wide, reusable styles are found in theme.js

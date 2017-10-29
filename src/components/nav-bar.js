@@ -110,68 +110,8 @@ const NavBar = (props) => {
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
-      {/* <Navbar.Collapse>
-
-        <Nav pullRight>
-          <NavLink
-            eventKey={1}
-            onClick={ e => props.history.push('/') }
-          >
-            Home
-          </NavLink>
-
-          <li className='nav-item'>
-            <Link to={'/contact'} className='nav-link'>
-              Test Contact
-            </Link>
-          </li>
-
-          <NavLink
-            eventKey={1}
-            onClick={ e => props.history.push('/books/emma') }
-          >
-            Emma
-          </NavLink>
-          <NavLink
-            eventKey={1}
-            onClick={ e => props.history.push('/contact') }
-          >
-            Contact
-          </NavLink>
-        </Nav>
-      </Navbar.Collapse> */}
-
-      {/* <Navbar.Text pullRight>
-        Under Construction... in the meantime, enjoy the new home page :)
-      </Navbar.Text> */}
-
-
-      {/* <div className='navbar-collapse collapse'> */}
-        <Navbar.Collapse>
-
-
-
+      <Navbar.Collapse>
         <ul className='nav navbar-nav navbar-right'>
-          {/* <NavLink
-            eventKey={1}
-            onClick={ e => props.history.push('/') }
-          >
-            Home
-          </NavLink>
-
-          <NavLink
-            eventKey={1}
-            onClick={ e => props.history.push('/books/emma') }
-          >
-            Emma
-          </NavLink>
-          <NavLink
-            eventKey={1}
-            onClick={ e => props.history.push('/contact') }
-          >
-            Contact
-          </NavLink> */}
-
           <li className='nav-item'>
             <Link to={'/'} className='nav-link'>
               Home
@@ -186,14 +126,11 @@ const NavBar = (props) => {
 
           <li className='nav-item'>
             <Link to={'/contact'} className='nav-link'>
-              Contact
+              Contact Us
             </Link>
           </li>
         </ul>
-
-        </Navbar.Collapse>
-      {/* </div> */}
-
+      </Navbar.Collapse>
     </StyledNavbar>
   )
 }

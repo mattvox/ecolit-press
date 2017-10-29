@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Header from './components/header'
+import Footer from './components/footer'
 import ScrollToTop from './components/helpers/scroll-top'
-import HomePage from './components/views/home-page'
-import ContactPage from './components/views/contact-page'
-import BookPage from './components/views/book-page'
-import NotFoundPage from './components/views/not-found-page'
+import HomePage from './components/views/home/home-page'
+import ContactPage from './components/views/contact/contact-page'
+import BookPage from './components/views/books/book-page'
+import NotFoundPage from './components/views/not-found/not-found-page'
 
 import * as actions from './actions'
 
@@ -33,6 +34,7 @@ class App extends Component {
             <Route exact path='/books/:title' component={BookPage} />
             <Route component={NotFoundPage} />
           </Switch>
+          <Footer />
           <ScrollToTop />
         </div>
       </BrowserRouter>
