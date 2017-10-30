@@ -9,30 +9,30 @@ const SectionContainer = (props) => {
   return (
     <Container {...containerProps}>
       <SectionWrapper fluid>
-        <Col
-          xs={12}
-          md={10}
-          mdOffset={1}
-          style={{
-            background: bg || theme.offWhite,
-            color: fg || theme.darkGray,
-          }}
-        >
-          <Section
+          <Col
+            xs={12}
+            md={10}
+            mdOffset={1}
             style={{
-              paddingTop: noPadding && 0,
-              paddingBottom: noPadding && 0,
+              background: bg || theme.offWhite,
+              color: fg || theme.darkGray,
             }}
           >
-            <Col
-              xs={12}
-              sm={10}
-              smOffset={1}
+            <Section
+              style={{
+                paddingTop: noPadding && 0,
+                paddingBottom: noPadding && 0,
+              }}
             >
-              {children}
-            </Col>
-          </Section>
-        </Col>
+              <Col
+                xs={12}
+                sm={10}
+                smOffset={1}
+              >
+                {children}
+              </Col>
+            </Section>
+          </Col>
       </SectionWrapper>
     </Container>
   )

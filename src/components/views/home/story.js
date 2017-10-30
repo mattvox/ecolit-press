@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Col, Image } from 'react-bootstrap'
+import { Grid, Row, Col, Image } from 'react-bootstrap'
 import { SectionWrapper, Title, Content, theme } from '../../styled/theme'
 import { ImageList } from './styled/styled-story'
 
@@ -30,20 +30,20 @@ const Story = ({ data }) => {
           <ReactMarkdown source={content} />
         </Content>
       </SectionContainer>
-      <SectionWrapper>
-        <Col
-          xs={12}
-          md={10}
-          mdOffset={1}
-          style={{
-            padding: 0,
-          }}
-        >
-          <ImageList>
-            {renderImages(images)}
-          </ImageList>
-        </Col>
-      </SectionWrapper>
+      <Grid fluid>
+        <Row>
+          <Col
+            xs={12}
+            md={10}
+            mdOffset={1}
+          >
+            <ImageList>
+              {renderImages(images)}
+            </ImageList>
+          </Col>
+        </Row>
+      </Grid>
+
     </div>
   )
 }

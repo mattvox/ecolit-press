@@ -5,6 +5,10 @@ export const ImageList = styled.ul`
   margin: 0;
   padding: 0;
 
+  ${'' /* div {
+    padding: 0;
+  } */}
+
   @media screen and (max-width: 767px) {
     li {
       display: none;
