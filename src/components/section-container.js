@@ -27,8 +27,9 @@ const SectionContainer = (props) => {
           }}
         >
           <Col
-            xs={10}
-            xsOffset={1}
+            xs={12}
+            sm={10}
+            smOffset={1}
           >
             {children}
           </Col>
