@@ -13,14 +13,14 @@ import NotFoundPage from './components/views/not-found/not-found-page'
 import * as actions from './actions'
 
 class App extends Component {
-  componentWillMount() {
-    const { home, book, contact } = this.props.pages
-    const { snapshotSiteData: snapshot } = this.props
-
-    !home.isFetched && snapshot('home', '4OQitB7Enm466COeq0meCI')
-    !book.isFetched && snapshot('book', '68RN7ii6woQEOmwcCYwiuo')
-    !contact.isFetched && snapshot('contact', '69C3xeSrsIyI4YiyqQQ4mg')
-  }
+  // componentWillMount() {
+  //   const { home, book, contact } = this.props.pages
+  //   const { snapshotSiteData: snapshot } = this.props
+  //
+  //   !home.isFetched && snapshot('home', '4OQitB7Enm466COeq0meCI')
+  //   !book.isFetched && snapshot('book', '68RN7ii6woQEOmwcCYwiuo')
+  //   !contact.isFetched && snapshot('contact', '69C3xeSrsIyI4YiyqQQ4mg')
+  // }
 
   render() {
     return (
