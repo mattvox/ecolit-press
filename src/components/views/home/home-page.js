@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Scroll from 'react-scroll'
-import { Grid } from 'react-bootstrap'
 
 import Landing from './landing'
 import Mission from './mission'
@@ -32,13 +31,11 @@ class HomePage extends Component {
       return (
         <div>
           <Landing />
-          <Grid fluid>
-            <Element name='Mission'>
-              <Mission data={mission} />
-            </Element>
-            <Story data={story} />
-            <BookFeature data={emmaFeature} />
-          </Grid>
+          <Element name='Mission'>
+            <Mission data={mission} />
+          </Element>
+          <Story data={story} />
+          <BookFeature data={emmaFeature} />
         </div>
       )
     }

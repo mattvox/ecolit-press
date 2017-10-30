@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Subtitle, Content } from '../../styled/theme'
+import { Subtitle, Content, theme } from '../../styled/theme'
 
 import { StyledTitle } from './styled/styled-book-landing'
 
@@ -14,7 +14,7 @@ const BookLanding = ({
     bookImage: { fields: { file: { url: bookImageUrl } } }
   }
 }) => (
-  <SectionContainer landing>
+  <SectionContainer bg={theme.offWhite} landing >
     <StyledTitle>{bookTitle}</StyledTitle>
     <Subtitle>{`by ${author}`}</Subtitle>
     <Content>

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col, Image } from 'react-bootstrap'
-import { SectionWrapper, Title, Content } from '../../styled/theme'
+import { SectionWrapper, Title, Content, theme } from '../../styled/theme'
 import { ImageList } from './styled/styled-story'
 
 import SectionContainer from '../../section-container'
@@ -24,7 +24,7 @@ const Story = ({ data }) => {
 
   return (
     <div>
-      <SectionContainer>
+      <SectionContainer bg={theme.offWhite}>
         <Title>{heading}</Title>
         <Content>
           <ReactMarkdown source={content} />

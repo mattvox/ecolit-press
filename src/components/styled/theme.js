@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Row } from 'react-bootstrap'
+import { Grid, Row } from 'react-bootstrap'
 
 // reusable styles used app-wide
 
@@ -28,8 +28,19 @@ export const Section = styled(Row)`
   padding-bottom: 40px;
 `
 
-export const SectionWrapper = styled(Row)`
+export const SectionWrapper = styled(Grid)`
   margin: 20px;
+`
+
+export const Container = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: ${props => props.landing && '80px'};
+
+  @media screen and (max-width: 767px) {
+    background: ${props => props.bg ? props.bg : theme.white};
+    padding-top: 0px;
+  }
 `
 
 export const Title = styled.h1`

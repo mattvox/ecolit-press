@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Grid } from 'react-bootstrap'
 
 import BookLanding from './book-landing'
 import BookPurchase from './book-purchase'
@@ -23,11 +22,11 @@ class BookPage extends Component {
       } = this.props.content
 
       return (
-        <Grid fluid>
+        <div>
           <BookLanding data={emmaLanding} />
           <BookPurchase data={emmaPurchase} />
           <Author data={author} />
-        </Grid>
+        </div>
       )
     }
 

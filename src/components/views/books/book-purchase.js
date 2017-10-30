@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col, Image } from 'react-bootstrap'
-import styled from 'styled-components'
 import {
   Title,
   Content,
@@ -11,19 +10,6 @@ import {
 } from '../../styled/theme'
 
 import SectionContainer from '../../section-container'
-
-const StyledSection = styled(SectionContainer)`
-  background:
-  url(https://images.contentful.com/8tgzv1ffznc9/4XoG6GvOMEKIwG6IaWq8Wy/38ace0792e1356f0f6c05c92788f1e75/bg_landscape_768_web.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-  background-color: #53C3C3;
-  z-index: 999;
-`
 
 const BookFeature = ({
   data: {

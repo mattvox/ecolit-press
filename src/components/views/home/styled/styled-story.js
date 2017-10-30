@@ -16,13 +16,16 @@ export const ImageList = styled.ul`
       margin-right: 4px;
       padding: 0;
     }
+
+    div {
+      padding: 0;
+    }
   }
 
   @media screen and (min-width: 768px) {
     li {
       display: block;
     }
-
 
     li>div {
       padding-left: 8px;
