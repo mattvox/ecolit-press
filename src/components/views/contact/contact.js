@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Col } from 'react-bootstrap'
-import { Page, Title, Content, theme } from '../../styled/theme'
+import styled from 'styled-components'
+import { Col, Row } from 'react-bootstrap'
+import { Title, Content, theme } from '../../styled/theme'
 
 
-const WithThemePage = Page.extend`
+const WithThemePage = styled(Row)`
   background-color: ${theme.white};
   color: ${theme.darkGray};
 
@@ -14,7 +15,10 @@ const WithThemePage = Page.extend`
 `
 
 const Contact = ({ data: { heading, content } }) => (
-  <WithThemePage>
+  <WithThemePage style={{
+    paddingTop: '60px',
+    paddingBottom: '60px',
+  }}>
     <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
       <Title>{heading}</Title>
       <Content>

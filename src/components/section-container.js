@@ -1,14 +1,15 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
-import { Container, Section, SectionWrapper, theme } from './styled/theme'
+import { Grid, Row, Col } from 'react-bootstrap'
+import { Container, theme } from './styled/theme'
 
 const SectionContainer = (props) => {
-  const { bg, fg, noPadding } = props
+  const { bg, fg } = props
   const { children, ...containerProps } = props
 
   return (
     <Container {...containerProps}>
-      <SectionWrapper fluid>
+      <Grid fluid>
+        <Row>
           <Col
             xs={12}
             md={10}
@@ -18,10 +19,10 @@ const SectionContainer = (props) => {
               color: fg || theme.darkGray,
             }}
           >
-            <Section
+            <Row
               style={{
-                paddingTop: noPadding && 0,
-                paddingBottom: noPadding && 0,
+                paddingTop: '40px',
+                paddingBottom: '40px',
               }}
             >
               <Col
@@ -31,9 +32,10 @@ const SectionContainer = (props) => {
               >
                 {children}
               </Col>
-            </Section>
+            </Row>
           </Col>
-      </SectionWrapper>
+        </Row>
+      </Grid>
     </Container>
   )
 }

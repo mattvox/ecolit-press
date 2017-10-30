@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Grid, Col } from 'react-bootstrap'
-import { Page, Content, theme } from './styled/theme'
+import { Grid, Row, Col } from 'react-bootstrap'
+import { Content, theme } from './styled/theme'
 
 const Icon = styled.a`
   font-size: 25px;
@@ -29,7 +29,7 @@ const IconContainer = styled.div`
   padding: 10px;
 `
 
-const WithThemePage = Page.extend`
+const WithThemePage = styled(Row)`
   background-color: ${theme.darkGray};
   color: ${theme.offWhite};
   text-align: center;
@@ -37,7 +37,10 @@ const WithThemePage = Page.extend`
 
 const Footer = () => (
   <Grid fluid>
-    <WithThemePage>
+    <WithThemePage style={{
+      paddingTop: '60px',
+      paddingBottom: '60px',
+    }}>
       <Col xs={10} xsOffset={1} style={{ textAlign: 'center' }}>
         <IconContainer>
           <Icon href="https://www.instagram.com/ecolitpress/" target="_blank">

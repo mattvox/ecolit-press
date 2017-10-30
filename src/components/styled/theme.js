@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Grid, Row } from 'react-bootstrap'
 
 // reusable styles used app-wide
 
@@ -18,29 +17,16 @@ export const theme = {
   purple: '#41395f',
 }
 
-export const Page = styled(Row)`
-  padding-top: 60px;
-  padding-bottom: 60px;
-`
-
-export const Section = styled(Row)`
-  padding-top: 40px;
-  padding-bottom: 40px;
-`
-
-export const SectionWrapper = styled(Grid)`
-  margin: 20px;
-`
-
 export const Container = styled.div`
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0;
   padding-top: ${props => props.landing && '80px'};
 
   @media screen and (max-width: 767px) {
     background: ${props => props.bg ? props.bg : theme.white};
-    padding-top: 0px;
+    padding-top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 `
 

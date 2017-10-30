@@ -5,9 +5,9 @@ export const ImageList = styled.ul`
   margin: 0;
   padding: 0;
 
-  ${'' /* div {
+  div {
     padding: 0;
-  } */}
+  }
 
   @media screen and (max-width: 767px) {
     li {
@@ -16,8 +16,8 @@ export const ImageList = styled.ul`
 
     li:first-child {
       display: block;
-      margin-left: 4px;
-      margin-right: 4px;
+      margin-left: 16px;
+      margin-right: 16px;
       padding: 0;
     }
 
@@ -27,6 +27,8 @@ export const ImageList = styled.ul`
   }
 
   @media screen and (min-width: 768px) {
+
+
     li {
       display: block;
     }
@@ -34,6 +36,7 @@ export const ImageList = styled.ul`
     li>div {
       padding-left: 8px;
       padding-right: 8px;
+      margin: 20px 0;
     }
 
     li:first-child {
