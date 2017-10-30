@@ -32,7 +32,7 @@ class HomePage extends Component {
       return (
         <div>
           <Landing />
-          <Grid>
+          <Grid fluid>
             <Element name='Mission'>
               <Mission data={mission} />
             </Element>

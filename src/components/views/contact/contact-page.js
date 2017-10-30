@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Grid } from 'react-bootstrap'
 
 import Contact from './contact'
-import Footer from '../../footer'
 
 import { fetchPageData } from '../../../actions'
 
@@ -22,7 +21,6 @@ class ContactPage extends Component {
       return (
         <Grid fluid>
           <Contact data={contact} />
-          <Footer />
         </Grid>
       )
     }

@@ -23,7 +23,7 @@ class BookPage extends Component {
       } = this.props.content
 
       return (
-        <Grid>
+        <Grid fluid>
           <BookLanding data={emmaLanding} />
           <BookPurchase data={emmaPurchase} />
           <Author data={author} />
