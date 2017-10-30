@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col, Image } from 'react-bootstrap'
-import { SectionWrapper, Title, Content, theme } from '../../styled/theme'
+import { SectionWrapper, Title, Content } from '../../styled/theme'
 import { ImageList } from './styled/styled-story'
 
 import SectionContainer from '../../section-container'
@@ -14,9 +14,9 @@ const Story = ({ data }) => {
     const { id } = image.sys
 
     return (
-      <li>
+      <li key={id}>
         <Col xs={12} sm={4}>
-          <Image key={id} responsive src={`https:${url}`} />
+          <Image responsive src={`https:${url}`} />
         </Col>
       </li>
     )
@@ -30,7 +30,7 @@ const Story = ({ data }) => {
           <ReactMarkdown source={content} />
         </Content>
       </SectionContainer>
-      <SectionWrapper bg={theme.white}>
+      <SectionWrapper>
         <Col
           xs={12}
           md={10}

@@ -5,10 +5,8 @@ import { Grid } from 'react-bootstrap'
 import BookLanding from './book-landing'
 import BookPurchase from './book-purchase'
 import Author from './author'
-import Footer from '../../footer'
 
 import { fetchPageData } from '../../../actions'
-
 
 class BookPage extends Component {
   componentWillMount() {
@@ -25,14 +23,11 @@ class BookPage extends Component {
       } = this.props.content
 
       return (
-        <div>
+        <Grid>
           <BookLanding data={emmaLanding} />
-          <Grid fluid>
-            <BookPurchase data={emmaPurchase} />
-            <Author data={author} />
-            <Footer />
-          </Grid>
-        </div>
+          <BookPurchase data={emmaPurchase} />
+          <Author data={author} />
+        </Grid>
       )
     }
 

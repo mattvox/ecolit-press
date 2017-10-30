@@ -2,22 +2,13 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Col, Image } from 'react-bootstrap'
 import {
-  Page,
   Title,
   Content,
   LinkButton,
   theme
 } from '../../styled/theme'
 
-
-const WithThemePage = Page.extend`
-
-`
-
-const StyledTitle = Title.extend`
-  color: ${theme.purple};
-  padding-bottom: 0px;
-`
+import SectionContainer from '../../section-container'
 
 const BookFeature = ({
   data: {
@@ -26,19 +17,18 @@ const BookFeature = ({
     bookImage: { fields: { file: { url: bookImageUrl } } }
   }
 }) => (
-  <WithThemePage>
-    <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
-      <Col xs={12} md={6}>
-        <StyledTitle>{heading}</StyledTitle>
-        <Content>
-          <ReactMarkdown source={content} />
-        </Content>
-      </Col>
-      <Col xs={12} md={6}>
-        <Image responsive src={`https:${bookImageUrl}`} />
-      </Col>
+  <SectionContainer bg={theme.white}>
+    <Col xs={12} md={6} style={{ marginLeft: 0, paddingLeft: 0 }}>
+      <Image responsive src={`https:${bookImageUrl}`} />
     </Col>
-    <Col xs={10} xsOffset={1} sm={10} smOffset={1} md={8} mdOffset={2}>
+    <Col xs={12} md={6}>
+      <Title noBottom>{heading}</Title>
+      <Content>
+        <ReactMarkdown source={content} />
+      </Content>
+    </Col>
+
+    <Col xs={12}>
       <Col xs={12} md={4}>
         <div
           style={{
@@ -70,7 +60,7 @@ const BookFeature = ({
         </div>
       </Col>
     </Col>
-  </WithThemePage>
+  </SectionContainer>
 )
 
 export default BookFeature;

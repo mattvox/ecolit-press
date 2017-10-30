@@ -3,10 +3,14 @@ import { Col } from 'react-bootstrap'
 import { Section, SectionWrapper, theme } from './styled/theme'
 
 const SectionContainer = (props) => {
-  const { bg, fg, noPadding, children } = props
+  const { bg, fg, noPadding, children, landing } = props
 
   return (
-    <SectionWrapper>
+    <SectionWrapper
+      style={{
+        paddingTop: landing && '80px',
+      }}
+    >
       <Col
         xs={12}
         md={10}
