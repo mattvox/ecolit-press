@@ -32,12 +32,7 @@ const Story = ({ data }) => {
       </SectionContainer>
       <Container>
         <Grid fluid>
-          <Row
-          //   style={{
-          //   marginTop: '20px',
-          //   marginBottom: '20px',
-          // }}
-          >
+          <Row>
             <Col
               xs={12}
               md={10}

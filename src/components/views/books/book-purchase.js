@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Col, Image } from 'react-bootstrap'
+import { Grid, Row, Col, Image } from 'react-bootstrap'
 import {
   Title,
   Content,
   LinkButton,
-  SectionWrapper,
+  Container,
   theme,
 } from '../../styled/theme'
 
@@ -93,6 +93,35 @@ const BookFeature = ({
        </Col>
      </Col>
   </SectionWrapper> */}
+  <Container>
+    <Grid fluid>
+      <Row>
+        <Col
+          xs={12}
+          md={10}
+          mdOffset={1}
+          style={{ padding: 0 }}
+        >
+          <Image style={{ marginBottom: '20px' }} responsive src={`https:${bottomImageUrl}`} />
+        </Col>
+        <Col
+          xs={12}
+          md={10}
+          mdOffset={1}
+          style={{ padding: 0 }}
+        >
+          <Row style={{ padding: '40px' }}>
+            <Col xs={10} xsOffset={1} sm={4} style={{ padding: '40px' }}>
+              <Image responsive src={`https:${farm1ImageUrl}`} />
+            </Col>
+            <Col xs={10} xsOffset={1} sm={4} smOffset={2} style={{ padding: '40px' }}>
+              <Image responsive src={`https:${farm2ImageUrl}`} />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Grid>
+  </Container>
  </div>
 )
 

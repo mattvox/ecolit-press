@@ -19,7 +19,7 @@ const Author = ({
   }
 }) => (
   <SectionContainer
-    bg={`linear-gradient(${theme.blue} 190px, ${theme.white} 190px)`}
+    bg={`linear-gradient(${theme.green} 190px, ${theme.white} 190px)`}
   >
     <Col xs={12} md={6}>
       <Title noBottom color={theme.white}>{heading}</Title>
@@ -28,7 +28,7 @@ const Author = ({
         <ReactMarkdown source={content} />
       </Content>
     </Col>
-    <Col xs={12} md={6}>
+    <Col xs={12} md={6} mdOffset={0}>
       <Image responsive src={`https:${authorPhotoUrl}`} />
     </Col>
   </SectionContainer>
